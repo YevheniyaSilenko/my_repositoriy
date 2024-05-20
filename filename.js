@@ -1,94 +1,82 @@
-// Задача 1: 'number' + 3 + 3
-// Результат: "number33"
-const result1 = 'number' + 3 + 3;
-console.log(result1);
+// 'number' + 3 + 3
+// Операція виконується зліва направо.
+// Спочатку 'number' + 3 = 'number3', а потім 'number3' + 3 = 'number33'.
+console.log('number' + 3 + 3); // 'number33'
 
-// Задача 2: null + 3
-// Результат: 3
-const result2 = null + 3;
-console.log(result2);
+// null + 3
+// null перетворюється в 0, тому 0 + 3 = 3.
+console.log(null + 3); // 3
 
-// Задача 3: 5 && "qwerty"
-// Результат: "qwerty"
-const result3 = 5 && "qwerty";
-console.log(result3);
+// 5 && "qwerty"
+// Оператор && повертає перший хибний операнд або останній істинний.
+// 5 є істинним, тому повертається "qwerty".
+console.log(5 && "qwerty"); // "qwerty"
 
-// Задача 4: +'40' + +'2' + "hillel"
-// Результат: "42hillel"
-const result4 = +'40' + +'2' + "hillel";
-console.log(result4);
+// +'40' + +'2' + "hillel";
+// Унарний + перетворює строки '40' і '2' в числа 40 і 2.
+// 40 + 2 = 42, і далі 42 + "hillel" = '42hillel'.
+console.log(+'40' + +'2' + "hillel"); // '42hillel'
 
-// Задача 5: '10' - 5 === 6
-// Результат: false
-const result5 = '10' - 5 === 6;
-console.log(result5);
+// '10' - 5 === 6;
+// '10' перетворюється в число 10, 10 - 5 = 5.
+// 5 === 6 є false.
+console.log('10' - 5 === 6); // false
 
-// Задача 6: true + false
-// Результат: 1
-const result6 = true + false;
-console.log(result6);
+// true + false
+// true перетворюється в 1, а false в 0.
+// 1 + 0 = 1.
+console.log(true + false); // 1
 
-// Задача 7: '4px' - 3
-// Результат: NaN (не число)
-const result7 = '4px' - 3;
-console.log(result7);
+// '4px' - 3
+// '4px' не може бути перетворене в число, тому результат NaN.
+console.log('4px' - 3); // NaN
 
-// Задача 8: '4' - 3
-// Результат: 1
-const result8 = '4' - 3;
-console.log(result8);
+// '4' - 3
+// '4' перетворюється в число 4, 4 - 3 = 1.
+console.log('4' - 3); // 1
 
-// Задача 9: '6' + 3 ** 0
-// Результат: "61"
-const result9 = '6' + 3 ** 0;
-console.log(result9);
+// '6' + 3 ** 0;
+// 3 ** 0 = 1, і '6' + 1 = '61'.
+console.log('6' + 3 ** 0); // '61'
 
-// Задача 10: 12 / '6'
-// Результат: 2
-const result10 = 12 / '6';
-console.log(result10);
+// 12 / '6'
+// '6' перетворюється в число 6, 12 / 6 = 2.
+console.log(12 / '6'); // 2
 
-// Задача 11: '10' + (5 === 6)
-// Результат: "10false"
-const result11 = '10' + (5 === 6);
-console.log(result11);
+// '10' + (5 === 6);
+// 5 === 6 є false, що перетворюється в 'false' у конкатенації.
+// '10' + 'false' = '10false'.
+console.log('10' + (5 === 6)); // '10false'
 
-// Задача 12: null == ''
-// Результат: false
-const result12 = null == '';
-console.log(result12);
+// null == ''
+// null не рівне '', тому результат false.
+console.log(null == ''); // false
 
-// Задача 13: 3 ** (9 / 3)
-// Результат: 27
-const result13 = 3 ** (9 / 3);
-console.log(result13);
+// 3 ** (9 / 3);
+// 9 / 3 = 3, і 3 ** 3 = 27.
+console.log(3 ** (9 / 3)); // 27
 
-// Задача 14: !!'false' == !!'true'
-// Результат: true
-const result14 = !!'false' == !!'true';
-console.log(result14);
+// !!'false' == !!'true'
+// Обидва вирази !!'false' і !!'true' є true, тому true == true.
+console.log(!!'false' == !!'true'); // true
 
-// Задача 15: 0 || '0' && 1
-// Результат: 1
-const result15 = 0 || '0' && 1;
-console.log(result15);
+// 0 || '0' && 1
+// 0 є хибним, тому обчислюється '0' && 1.
+// '0' є істинним, тому результатом є 1.
+console.log(0 || '0' && 1); // 1
 
-// Задача 16: (+null == false) < 1
-// Результат: true
-const result16 = (+null == false) < 1;
-console.log(result16);
+// (+null == false) < 1;
+// +null перетворюється в 0, 0 == false є true, true < 1 є true.
+console.log((+null == false) < 1); // true
 
-// Задача 17: false && true || true
-// Результат: true
-const result17 = false && true || true;
-console.log(result17);
+// false && true || true
+// false && true є false, false || true є true.
+console.log(false && true || true); // true
 
-// Задача 18: false && (false || true)
-// Результат: false
-const result18 = false && (false || true);
-console.log(result18);
+// false && (false || true);
+// false || true є true, але false && true є false.
+console.log(false && (false || true)); // false
 
-// Задача 19: (+null == false) < 1 ** 5
-// Результат: true
-const result19 = (+null == false) < 1 ** 5;
-console.log(result19);
+// (+null == false) < 1 ** 5;
+// +null перетворюється в 0, 0 == false є true, 1 ** 5 = 1, true < 1 є true.
+console.log((+null == false) < 1 ** 5); // true
