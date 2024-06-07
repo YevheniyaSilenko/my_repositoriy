@@ -12,5 +12,5 @@ function checkProbabilityTheory(count) {
     console.log(`Відсоток парних до непарних: ${(even / count * 100).toFixed(2)}% / ${(odd / count * 100).toFixed(2)}%`);
 }
 
-// Приклад виклику функції
+
 checkProbabilityTheory(52);
